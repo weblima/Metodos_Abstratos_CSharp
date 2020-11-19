@@ -17,15 +17,12 @@ namespace TaxPayers.Entities {
 
         public override double Tax() {
 
-            double IndividualTax;
+            double IndividualTax = (AnualIncome * 0.25);
 
             if (AnualIncome < 20000.00) {
                 IndividualTax = (AnualIncome * 0.15);
             }
-            else {
-                IndividualTax = (AnualIncome * 0.25);
-            }
-
+           
             if (HealthExpenditures > 0) {
                 IndividualTax -= (HealthExpenditures * 0.5);
             }

@@ -12,7 +12,15 @@ namespace TaxPayers.Entities {
         }
 
         public override double Tax() {
-            return 1;
+            
+            double CompanyTax = (AnualIncome * 0.16);
+
+            if (NumberOfEmproyees > 10) {
+                CompanyTax = (AnualIncome * 0.14);
+            }
+            
+
+            return CompanyTax;
         }
     }
 }
