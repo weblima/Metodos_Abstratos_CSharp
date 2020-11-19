@@ -29,8 +29,7 @@ namespace TaxPayers {
                     double healthExpenditures = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
                     list.Add(new Individual(name, anualIncome, healthExpenditures));
                 }
-
-                if (type == 'c') {
+                else{
                     Console.Write("Number of employees: ");
                     int numberOfEmployees = int.Parse(Console.ReadLine());
                     list.Add(new Company(name, anualIncome, numberOfEmployees));
